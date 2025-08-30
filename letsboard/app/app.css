@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");*/
+/*@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 /*@import "../node_modules/@syncfusion/ej2-base/styles/material.css";*/
 /*@import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";*/
 /*@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";*/
@@ -10,6 +13,7 @@
 
 @theme {
   --font-figtree: "Figtree", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
   --color-dark-100: #1f1f36;
   --color-dark-200: #141627;
@@ -277,7 +281,7 @@
     }
   }
   .link-logo {
-    @apply flex items-center gap-1.5 py-10 border-b border-light-100;
+    @apply flex items-center gap-1.5 py-5 border-b border-light-100;
     h1 {
       @apply text-base md:text-2xl font-bold text-dark-100;
     }
@@ -462,7 +466,7 @@
     @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
   }
   .nav-item {
-    @apply flex items-center text-xs md:text-lg font-normal cursor-pointer gap-2.5 py-[18px] px-3.5 rounded-lg text-dark-200 hover:bg-primary-100 hover:text-white;
+    @apply flex items-center text-xs md:text-lg font-normal cursor-pointer gap-2.5 py-[8px] px-2 rounded-lg text-dark-200 hover:bg-primary-50 hover:text-gray-800;
   }
   .combo-box {
     @apply !p-3.5 !border w-full !border-light-400 !rounded-xl !text-base !text-dark-300 !font-normal;
@@ -471,7 +475,7 @@
 
 html,
 body {
-  font-family: "Figtree", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   background-color: #f9fbfc;
   scroll-behavior: smooth;
 }
@@ -508,6 +512,7 @@ body {
 
 .e-sidebar.e-left {
   border-right: 1px solid #ecf2ef;
+  height: 100vh;
 }
 .e-btn,
 .e-css.e-btn {
