@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "@syncfusion/ej2-base": "^30.2.6",
+    "@syncfusion/ej2-react-buttons": "^30.2.4",
+    "@syncfusion/ej2-react-charts": "^30.2.7",
+    "@syncfusion/ej2-react-dropdowns": "^30.2.6",
+    "@syncfusion/ej2-react-grids": "^30.2.6",
+    "@syncfusion/ej2-react-maps": "^30.2.4",
+    "@syncfusion/ej2-react-navigations": "^30.2.7",
+    "@syncfusion/ej2-react-splitbuttons": "^30.2.4",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.1"
   }
