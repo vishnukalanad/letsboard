@@ -1,21 +1,23 @@
 import type { AxisModel } from "@syncfusion/ej2-react-charts";
-
+import { GoHomeFill } from "react-icons/go";
+import { FaUserFriends } from "react-icons/fa";
+import { MdAirplaneTicket } from "react-icons/md";
 export const sidebarItems = [
   {
     id: 1,
-    icon: "/assets/icons/home.svg",
+    icon: GoHomeFill,
     label: "Dashboard",
     href: "/dashboard",
   },
   {
     id: 3,
-    icon: "/assets/icons/users.svg",
+    icon: FaUserFriends,
     label: "All Users",
     href: "/users",
   },
   {
     id: 4,
-    icon: "/assets/icons/itinerary.svg",
+    icon: MdAirplaneTicket,
     label: "AI Trips",
     href: "/trips",
   },
