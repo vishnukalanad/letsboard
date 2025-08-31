@@ -1,11 +1,12 @@
 import React, {useEffect, useRef} from 'react';
 import {BsXCircleFill} from "react-icons/bs";
 import {sidebarItems} from "~/constants";
-import {NavLink} from "react-router";
+import {Link, NavLink} from "react-router";
 import {cn} from "~/lib/utils";
-import { TbLogout2 } from "react-icons/tb";
+import {TbLayoutSidebarLeftExpandFilled, TbLogout2} from "react-icons/tb";
 import {useDispatch, useSelector} from "react-redux";
 import {stateActions} from "~/store/slice";
+import {PiPaperPlaneTiltFill} from "react-icons/pi";
 
 function Sidebar() {
     let drawerRef = useRef(null);
@@ -19,8 +20,18 @@ function Sidebar() {
 
     return (
         <aside>
-            <div ref={drawerRef} className={`relative top-0 left-0 w-3/4 md:w-[280px] h-full bg-white z-50 pt-4 px-5 flex flex-col justify-between border border-slate-100 ${!state.ui.isSidebarOpen && 'custom-sidebar-hide'}`}>
-                <div className={"flex items-center justify-end"}>
+            <div ref={drawerRef} className={`fixed md:relative top-0 left-0 w-full md:w-[280px] h-full bg-white z-50 pt-4 px-5 flex flex-col justify-between border border-slate-100 ${!state.ui.isSidebarOpen && 'custom-sidebar-hide'}`}>
+                <div className={"flex items-center justify-between"}>
+                    <div>
+                        <Link to={"/"}>
+                            <div className={"flex items-center justify-between gap-2"}>
+                                <div className="flex items-center gap-2">
+                                    <p className="text-xl text-blue-500"><PiPaperPlaneTiltFill /></p>
+                                    <h2 className="text-gray-700 text-lg font-bold">Fly.</h2>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                     <button onClick={() => toggleSideBar(drawerRef)} className="text-gray-700 text-xl cursor-pointer">
                         <BsXCircleFill/></button>
                 </div>
@@ -33,7 +44,7 @@ function Sidebar() {
                                     'bg-slate-100 !text-slate-800 hover:!bg-slate-200': isActive,
                                 })}>
                                     <item.icon />
-                                    {item.label}
+                                    <p className="text-base">{item.label}</p>
                                 </div>
                             }}
                         </NavLink>

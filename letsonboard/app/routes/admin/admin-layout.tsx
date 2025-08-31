@@ -1,6 +1,5 @@
 import React from 'react';
 import {Outlet} from "react-router";
-import Navbar from "../../../components/Navbar";
 import Sidebar from "../../../components/Sidebar";
 import {Provider} from "react-redux";
 import Store from "~/store";
@@ -12,7 +11,7 @@ function AdminLayout() {
                <Sidebar />
                <div className="flex-1 flex h-full">
                    <div className="w-full">
-                       <Navbar />
+                       {/*<Navbar />*/}
                        <Outlet />
                    </div>
                </div>
