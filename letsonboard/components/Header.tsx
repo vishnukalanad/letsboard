@@ -4,6 +4,8 @@ import {stateActions} from "~/store/slice";
 import {HiMenu} from "react-icons/hi";
 import {PiPaperPlaneTiltFill} from "react-icons/pi";
 import {Link} from "react-router";
+import {useGSAP} from "@gsap/react";
+import {gsap} from "gsap";
 
 function Header({title, description}: { title: string, description: string}) {
     const dispatch = useDispatch();
@@ -14,9 +16,30 @@ function Header({title, description}: { title: string, description: string}) {
         dispatch(stateActions.toggleSidebar())
     }
 
+    useGSAP(() => {
+        gsap.set("#header", {
+            visibility: "visible",
+        })
+
+        gsap.fromTo(
+            "#header",
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.inOut",
+            }
+        )
+
+    },{
+        dependencies: [state.ui.isSidebarOpen],
+    })
+
     return (
         <>
-            <div className="items-center justify-between px-6 py-4 gap-4 flex bg-white md:bg-transparent">
+            <div className="items-center justify-between px-6 py-4 gap-4 flex bg-white md:bg-transparent" id={"header"}>
                 <div className={`flex ${state.ui.isSidebarOpen ? 'md:hidden' : 'md:flex'}`}>
                     <Link to={"/"}>
                         <div className={"flex items-center justify-between gap-2"}>
@@ -27,11 +50,11 @@ function Header({title, description}: { title: string, description: string}) {
                         </div>
                     </Link>
                 </div>
-                <div className={`hidden md:flex md:flex-col ${!state.ui.isSidebarOpen && 'text-center'}`}>
+                <div className={`hidden md:flex md:flex-col ${!state.ui.isSidebarOpen && 'text-center'}`} id={"header-content"}>
                     <h2 className="text-base md:text-lg text-slate-700 font-medium">{title}</h2>
                     <p className="text-xs md:text-sm text-slate-500">{description}</p>
                 </div>
-                <div className="flex align-center">
+                <div className={`flex align-center ${state.ui.isSidebarOpen && 'hidden'}`}>
                     <button className="text-2xl text-gray-600 cursor-pointer" onClick={toggleSidebar}>
                         <HiMenu/>
                     </button>

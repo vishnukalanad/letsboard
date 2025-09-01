@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from "../../../components/Header";
 
 function AllUsers() {
     return (
-        <div>All users</div>
+        <div>
+            <Header title="List Users" description="List and sort users." />
+        </div>
     );
 }
 

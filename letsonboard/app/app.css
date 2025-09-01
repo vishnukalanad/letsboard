@@ -466,7 +466,7 @@
     @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
   }
   .nav-item {
-    @apply flex items-center text-xs md:text-lg font-normal cursor-pointer gap-2.5 py-[8px] px-2 rounded-lg text-dark-200 hover:bg-slate-100 hover:text-gray-800;
+    @apply flex items-center text-xs md:text-lg font-normal cursor-pointer gap-2.5 py-[8px] px-2 rounded-lg text-gray-500 hover:bg-slate-100 hover:text-gray-800;
   }
   .combo-box {
     @apply !p-3.5 !border w-full !border-light-400 !rounded-xl !text-base !text-dark-300 !font-normal;

@@ -9,6 +9,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
     "@reduxjs/toolkit": "^2.8.2",
@@ -20,8 +21,10 @@
     "@syncfusion/ej2-react-maps": "^30.2.4",
     "@syncfusion/ej2-react-navigations": "^30.2.7",
     "@syncfusion/ej2-react-splitbuttons": "^30.2.4",
+    "appwrite": "^18.1.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.18",
+    "gsap": "^3.13.0",
     "isbot": "^5.1.27",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
